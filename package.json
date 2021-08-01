@@ -1,0 +1,92 @@
+{
+  "name": "ridrm",
+  "productName": "RiDRM",
+  "version": "1.0.0",
+  "description": "Ridibooks DRM Remover.",
+  "private": true,
+  "main": "./dist/main.js",
+  "scripts": {
+    "start-dev": "electron src/main.js",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "build": "webpack",
+    "make": "electron-forge make",
+    "make-win": "electron-forge make --platform win32"
+  },
+  "keywords": [
+    "DRM",
+    "Ridibooks"
+  ],
+  "author": "LafrenzeM",
+  "license": "MIT",
+  "dependencies": {
+    "keytar": "^7.7.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.58",
+    "@electron-forge/maker-deb": "^6.0.0-beta.58",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.58",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.58",
+    "@electron-forge/maker-zip": "^6.0.0-beta.58",
+    "adm-zip": "^0.5.5",
+    "atob": "^2.1.2",
+    "axios": "^0.21.1",
+    "crypto-js": "^4.0.0",
+    "electron": "^13.1.7",
+    "node-loader": "^2.0.0",
+    "unzipper": "^0.10.11",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ]
+      },
+      "packagerConfig": {
+        "asar": false,
+        "ignore": [
+          "build.sh",
+          "src/*",
+          "srcc/*",
+          ".gitignore",
+          "webpack.*",
+          "node_modules/.package-lock.json",
+          "asset/*"
+        ],
+        "icon": "./src/R"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "platforms": [
+            "win32"
+          ],
+          "config": {
+            "name": "ridrm"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

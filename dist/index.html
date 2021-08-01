@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Ricentia</title>
+  </head>
+  <body>
+
+    <div class="title-bar"></div>
+
+    <div class="page-title-box">
+      <div class="page-title-text">RiDRM <span class="page-subtitle-text">Ridibooks DRM Remover</span>
+      </div>
+      <button type="button" class="run-button" id="run-button" color="white">RUN</button>
+    </div>
+
+    <div class="field clickable" id ="output-dir-config">
+        <div class="field-text">
+          Output Directory
+          <div class="field-sub" id="output-dir-value"></div>
+        </div>
+    </div>
+    <div class="field" id ="main-log-entry" >
+      <div class="field-text init" id="main-log-text">
+          Ready
+         <div class="field-sub" id="main-log-sub">Click RUN button to start removing DRMs.</div>
+      </div>
+      <div class="progress" id="run-progress">0%</div>
+  </div>
+
+    <script>
+      require('./renderer');
+    </script>
+
+  </body>
+
+</html>

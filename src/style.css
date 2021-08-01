@@ -1,0 +1,150 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, input {
+  font-size: 16px;
+  font-family: "Apple SD Gothic Neo", -apple-system, "Noto Sans KR", KoPubDotum, arial, 나눔고딕, "Nanum Gothic", Dotum, sans-serif;
+  text-rendering: optimizespeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+div {
+  display: block;
+}
+
+.title-bar {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  height: 23px;
+  z-index: 999;
+  width: 100%;
+  background-color: transparent;
+  -webkit-app-region: drag;
+}
+
+
+.page-title-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 120px;
+  border-bottom: 1px solid rgb(230,232,235);
+}
+
+.page-title-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.48px;
+  margin: 55px auto auto 24px;
+}
+
+.page-subtitle-text {
+  font-size: 13px;
+  color: rgb(99, 108, 115);
+}
+
+.run-button {
+  outline: none;
+  border: initial;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  font: 400 13.3333px Arial;
+  font-weight: 700;
+  text-align: center;
+  transition: all 200ms ease-in-out 0s;
+  line-height: 30px;
+  font-size: 13px;
+  border-radius: 3px;
+  /*color: rgb(127, 136, 145);*/
+  color: rgb(127, 136, 145);
+  background-color: white;
+  box-shadow: rgb(209, 213, 217) 0px 0px 0px 1px inset;
+  position: absolute;
+  top: 52px;
+  right: 24px;
+  min-width: 64px;
+  height: 28px;
+  padding: 0px 9px;
+  white-space: nowrap;
+}
+
+div.clickable{
+  cursor: pointer;
+  color: rgb(0,0,0);
+}
+
+button.clickable{
+  cursor: pointer;
+  color: rgb(50, 50, 50);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 67px;
+  color: rgb(72, 79, 85);
+  border-bottom: 1px solid rgb(230, 232, 235);
+}
+
+.field-text {
+  margin: auto 24px;
+  line-height: 18px;
+  /*width: calc(100% - 24px);*/
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.3px;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.field-sub {
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgb(99, 108, 115);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.init{
+  color: rgb(99, 108, 115);
+}
+
+.progress {
+  display: inline-block;
+  position: absolute;
+  right: 24px;
+  top: 18px;
+  height: 28px;
+  padding: 0px 9px;
+  outline: none;
+  border: none;
+  text-indent: 0px;
+  text-shadow: none;  
+  font: 400 13.3333px Arial;
+  font-weight: 700;
+  text-align: center;
+  transition: all 200ms ease-in-out 0s;
+  line-height: 30px;
+  font-size: 13px;
+  border-radius: 3px;
+  /*color: rgb(127, 136, 145);*/
+  color: rgb(127, 136, 145);
+  background-color: white;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset;
+  white-space: nowrap;
+}
